@@ -58,6 +58,7 @@ set(EXTERNAL_LIBRARIES
     LibUSB::LibUSB
     libyuv::libyuv
     glfw::glfw
+    sick_visionary_cpp_shared::sick_visionary_cpp_shared
     ${OPENGL_LIBRARIES}
 )
 

@@ -4,6 +4,7 @@
 # Create K4A library
 add_library(k4a SHARED
             k4a.c
+            "visionary.c"
             dll_main.c
             ${CMAKE_CURRENT_BINARY_DIR}/version.rc)
 
@@ -52,7 +53,8 @@ target_link_libraries(k4a PRIVATE
     k4ainternal::imu
     k4ainternal::logging
     k4ainternal::queue
-    k4ainternal::transformation)
+    k4ainternal::transformation
+    k4ainternal::sick_visionary)
 
 # Define alias for k4a
 add_library(k4a::k4a ALIAS k4a)
