@@ -1,56 +1,52 @@
-{
+﻿{
     "configurations": [
         {
             "name": "Win-x64-Debug-Ninja",
             "generator": "Ninja",
             "configurationType": "Debug",
-            "inheritEnvironments": [
-                "msvc_x64"
-            ],
+            "inheritEnvironments": [ "msvc_x64" ],
             "buildRoot": "${projectDir}\\build\\${name}",
             "installRoot": "${projectDir}\\install\\${name}",
             "cmakeCommandArgs": "",
             "buildCommandArgs": "-v",
-            "ctestCommandArgs": ""
+            "ctestCommandArgs": "",
+            "variables": []
         },
         {
             "name": "Win-x64-Release-Ninja",
             "generator": "Ninja",
             "configurationType": "RelWithDebInfo",
-            "inheritEnvironments": [
-                "msvc_x64"
-            ],
+            "inheritEnvironments": [ "msvc_x64" ],
             "buildRoot": "${projectDir}\\build\\${name}",
             "installRoot": "${projectDir}\\install\\${name}",
             "cmakeCommandArgs": "",
             "buildCommandArgs": "-v",
-            "ctestCommandArgs": ""
+            "ctestCommandArgs": "",
+            "variables": []
         },
         {
             "name": "Win-x64-Debug-MSBuild",
-            "generator": "Visual Studio 15 2017 Win64",
+            "generator": "Visual Studio 16 2019 Win64",
             "configurationType": "Debug",
-            "inheritEnvironments": [
-                "msvc_x64"
-            ],
+            "inheritEnvironments": [ "msvc_x64" ],
             "buildRoot": "${projectDir}\\build\\${name}",
             "installRoot": "${projectDir}\\install\\${name}",
             "cmakeCommandArgs": "",
             "buildCommandArgs": "/v:m",
-            "ctestCommandArgs": ""
+            "ctestCommandArgs": "",
+            "variables": []
         },
         {
             "name": "Win-x64-Release-MSBuild",
-            "generator": "Visual Studio 15 2017 Win64",
+            "generator": "Visual Studio 16 2019 Win64",
             "configurationType": "RelWithDebInfo",
-            "inheritEnvironments": [
-                "msvc_x64"
-            ],
+            "inheritEnvironments": [ "msvc_x64" ],
             "buildRoot": "${projectDir}\\build\\${name}",
             "installRoot": "${projectDir}\\install\\${name}",
             "cmakeCommandArgs": "",
             "buildCommandArgs": "/v:m",
-            "ctestCommandArgs": ""
+            "ctestCommandArgs": "",
+            "variables": []
         },
         {
             "name": "Linux-Debug-Makefile",
@@ -67,19 +63,14 @@
             "remoteCopySourcesOutputVerbosity": "Normal",
             "remoteCopySourcesConcurrentCopies": "10",
             "remoteCopySourcesMethod": "rsync",
-            "remoteCopySourcesExclusionList": [
-                ".vs",
-                ".git",
-                "/build"
-            ],
+            "remoteCopySourcesExclusionList": [ ".vs", ".git", "/build" ],
             "rsyncCommandArgs": "-t --delete --delete-excluded",
             "remoteCopyBuildOutput": false,
             "cmakeCommandArgs": "",
             "buildCommandArgs": "",
             "ctestCommandArgs": "",
-            "inheritEnvironments": [
-                "linux_x64"
-            ]
+            "inheritEnvironments": [ "linux_x64" ],
+            "variables": []
         },
         {
             "name": "Linux-Release-Makefile",
@@ -96,19 +87,14 @@
             "remoteCopySourcesOutputVerbosity": "Normal",
             "remoteCopySourcesConcurrentCopies": "10",
             "remoteCopySourcesMethod": "rsync",
-            "remoteCopySourcesExclusionList": [
-                ".vs",
-                ".git",
-                "/build"
-            ],
+            "remoteCopySourcesExclusionList": [ ".vs", ".git", "/build" ],
             "rsyncCommandArgs": "-t --delete --delete-excluded",
             "remoteCopyBuildOutput": false,
             "cmakeCommandArgs": "",
             "buildCommandArgs": "",
             "ctestCommandArgs": "",
-            "inheritEnvironments": [
-                "linux_x64"
-            ]
+            "inheritEnvironments": [ "linux_x64" ],
+            "variables": []
         },
         {
             "name": "Linux-Debug-Makefile-Clang",
@@ -125,23 +111,18 @@
             "remoteCopySourcesOutputVerbosity": "Normal",
             "remoteCopySourcesConcurrentCopies": "10",
             "remoteCopySourcesMethod": "rsync",
-            "remoteCopySourcesExclusionList": [
-                ".vs",
-                ".git",
-                "/build"
-            ],
+            "remoteCopySourcesExclusionList": [ ".vs", ".git", "/build" ],
             "rsyncCommandArgs": "-t --delete --delete-excluded",
             "remoteCopyBuildOutput": false,
             "cmakeCommandArgs": "",
             "buildCommandArgs": "",
             "ctestCommandArgs": "",
-            "inheritEnvironments": [
-                "linux_x64"
-            ],
+            "inheritEnvironments": [ "linux_x64" ],
             "variables": [
                 {
                     "name": "CMAKE_TOOLCHAIN_FILE",
-                    "value": "/var/tmp/src/${workspaceHash}/${name}/cmake/toolchains/x86_64-linux-clang.cmake"
+                    "value": "/var/tmp/src/${workspaceHash}/${name}/cmake/toolchains/x86_64-linux-clang.cmake",
+                    "type": "STRING"
                 }
             ]
         },
@@ -160,51 +141,44 @@
             "remoteCopySourcesOutputVerbosity": "Normal",
             "remoteCopySourcesConcurrentCopies": "10",
             "remoteCopySourcesMethod": "rsync",
-            "remoteCopySourcesExclusionList": [
-                ".vs",
-                ".git",
-                "/build"
-            ],
+            "remoteCopySourcesExclusionList": [ ".vs", ".git", "/build" ],
             "rsyncCommandArgs": "-t --delete --delete-excluded",
             "remoteCopyBuildOutput": false,
             "cmakeCommandArgs": "",
             "buildCommandArgs": "",
             "ctestCommandArgs": "",
-            "inheritEnvironments": [
-                "linux_x64"
-            ],
+            "inheritEnvironments": [ "linux_x64" ],
             "variables": [
                 {
                     "name": "CMAKE_TOOLCHAIN_FILE",
-                    "value": "/var/tmp/src/${workspaceHash}/${name}/cmake/toolchains/x86_64-linux-clang.cmake"
+                    "value": "/var/tmp/src/${workspaceHash}/${name}/cmake/toolchains/x86_64-linux-clang.cmake",
+                    "type": "STRING"
                 }
             ]
         },
         {
             "name": "UWP-x64-Debug-MSBuild",
-            "generator": "Visual Studio 15 2017",
+            "generator": "Visual Studio 16 2019 Win64",
             "configurationType": "Debug",
-            "inheritEnvironments": [
-                "msvc_x64_x64"
-            ],
+            "inheritEnvironments": [ "msvc_x64_x64" ],
             "buildRoot": "${projectDir}\\build\\${name}",
             "installRoot": "${projectDir}\\install\\${name}",
             "cmakeCommandArgs": "-DCMAKE_SYSTEM_NAME=WindowsStore -DCMAKE_SYSTEM_VERSION=10.0",
             "buildCommandArgs": "",
-            "ctestCommandArgs": ""
+            "ctestCommandArgs": "",
+            "variables": []
         },
         {
             "name": "UWP-x64-Release-MSBuild",
-            "generator": "Visual Studio 15 2017",
+            "generator": "Visual Studio 16 2019 Win64",
             "configurationType": "Release",
-            "inheritEnvironments": [
-                "msvc_x64_x64"
-            ],
+            "inheritEnvironments": [ "msvc_x64_x64" ],
             "buildRoot": "${projectDir}\\build\\${name}",
             "installRoot": "${projectDir}\\install\\${name}",
             "cmakeCommandArgs": "-DCMAKE_SYSTEM_NAME=WindowsStore -DCMAKE_SYSTEM_VERSION=10.0",
             "buildCommandArgs": "",
-            "ctestCommandArgs": ""
+            "ctestCommandArgs": "",
+            "variables": []
         }
     ]
 }
