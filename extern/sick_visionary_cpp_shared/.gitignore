@@ -1,0 +1,8 @@
+# intermediate build files
+/build/
+/output/
+# hide generated project files
+/.cproject
+/.project
+# hide user configuration
+/*.user
