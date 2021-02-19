@@ -4,16 +4,6 @@
 // This library
 #include <k4a/k4a.h>
 
-// Visionary specific library
-//#include <VisionaryControl.h>
-//#include "VisionaryControl.h"
-//#include "CoLaParameterReader.h"
-//#include "CoLaParameterWriter.h"
-//#include "VisionaryTMiniData.h"
-//#include "VisionaryDataStream.h"
-//#include "PointXYZ.h"
-//#include "PointCloudPlyWriter.h"
-
 // Dependent libraries
 #include <k4ainternal/common.h>
 #include <k4ainternal/capture.h>
@@ -40,7 +30,6 @@
 extern "C" {
 #endif
 
-//
 char K4A_ENV_VAR_LOG_TO_A_FILE[] = K4A_ENABLE_LOG_TO_A_FILE;
 
 typedef struct _k4a_context_t
@@ -85,6 +74,7 @@ uint32_t k4a_device_get_installed_count(void)
 {
     uint32_t device_count = 0;
     // TODO: Implement CoLa Scan
+
     return device_count;
 }
 
@@ -103,20 +93,17 @@ k4a_result_t k4a_set_allocator(k4a_memory_allocate_cb_t allocate, k4a_memory_des
 k4a_result_t k4a_device_open(uint32_t index, k4a_device_t *device_handle)
 {
     RETURN_VALUE_IF_ARG(K4A_RESULT_FAILED, device_handle == NULL);
-    k4a_context_t *device = NULL;
     k4a_result_t result = K4A_RESULT_SUCCEEDED;
-    k4a_device_t handle = NULL;
-    const guid_t *container_id = NULL;
-    char serial_number[MAX_SERIAL_NUMBER_LENGTH];
-    size_t serial_number_size = sizeof(serial_number);
 
     allocator_initialize();
 
+    index = index + 1;
+
     // TODO: open a connection to a Visionary device & fill the interface with the needed data
-    
-    //auto pDataHandler = std::make_shared<VisionaryTMiniData>();
-    //VisionaryDataStream dataStream(pDataHandler);
-    //VisionaryControl visionaryControl;
+
+    // auto pDataHandler = std::make_shared<VisionaryTMiniData>();
+    // VisionaryDataStream dataStream(pDataHandler);
+    // VisionaryControl visionaryControl;
 
     return result;
 }
@@ -124,7 +111,6 @@ k4a_result_t k4a_device_open(uint32_t index, k4a_device_t *device_handle)
 void k4a_device_close(k4a_device_t device_handle)
 {
     RETURN_VALUE_IF_HANDLE_INVALID(VOID_VALUE, k4a_device_t, device_handle);
-    k4a_context_t *device = k4a_device_t_get_context(device_handle);
 
     // TODO: close the connection for the Visionary device
 

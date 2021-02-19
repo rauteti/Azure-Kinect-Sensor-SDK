@@ -3,7 +3,6 @@
 
 # Create K4A library
 add_library(k4a SHARED
-            k4a.c
             "visionary.c"
             dll_main.c
             ${CMAKE_CURRENT_BINARY_DIR}/version.rc)

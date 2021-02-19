@@ -2,7 +2,7 @@
 # Licensed under the MIT License.
 
 add_library(k4a_sick_visionary STATIC
-            sick_visionary.c
+            "sick_visionary.cpp"
             )
 
 # Consumers should #include <k4ainternal/sick_visionary.h>

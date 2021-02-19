@@ -19,16 +19,14 @@
 #include <VisionaryControl.h>
 #include <CoLaParameterReader.h>
 #include <CoLaParameterWriter.h>
-#include <VisionaryTMiniData.h>    // Header specific for the Time of Flight data
+#include <VisionaryTMiniData.h> // Header specific for the Time of Flight data
 #include <VisionaryDataStream.h>
-#include <PointXYZ.h>
-#include <PointCloudPlyWriter.h>
+//#include <PointXYZ.h>
+//#include <PointCloudPlyWriter.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-
 
 /** Handle to the visionary device.
  *
@@ -36,8 +34,7 @@ extern "C" {
  * with \ref visionary_destroy.
  * Invalid handles are set to 0.
  */
-//K4A_DECLARE_HANDLE(visionary_t);
-
+K4A_DECLARE_HANDLE(visionary_t);
 
 /** Open a handle to the Visionary device.
  *

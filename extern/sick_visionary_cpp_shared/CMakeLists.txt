@@ -25,7 +25,7 @@ aux_source_directory(. SRC_LIST)
 
 add_library(${PROJECT_NAME} STATIC ${SRC_LIST})
 
-add_library(sick_visionary_cpp_shared::sick_visionary_cpp_shared ALIAS sick_visionary_cpp_shared)
+add_library(sick_visionary_cpp_shared::sick_visionary_cpp_shared ALIAS ${PROJECT_NAME})
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_11)
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_EXTENSIONS OFF)
